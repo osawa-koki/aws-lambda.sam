@@ -1,8 +1,9 @@
 FROM public.ecr.aws/lambda/nodejs:18
 
-COPY app.mjs package*.json ./
-
+COPY package*.json ./
 RUN npm install
+COPY . .
+
 # If you are building your code for production, instead include a package-lock.json file on this directory and use:
 # RUN npm ci --production
 
