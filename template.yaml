@@ -19,11 +19,11 @@ Resources:
       Architectures:
         - x86_64
       Events:
-        HelloWorld:
+        AllApiPaths:
           Type: Api
           Properties:
-            Path: /hello
-            Method: get
+            Path: /{proxy+}
+            Method: any
     Metadata:
       DockerTag: nodejs18.x-v1
       DockerContext: ./hello-world
