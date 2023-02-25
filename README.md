@@ -1,3 +1,3 @@
 # aws-lambda.tf
 
-Terraformで`AWS Lambda`をプロビジョニングするサンプルプロジェクトです。  
+🦃🦃🦃 Terraformで`AWS Lambda`をプロビジョニングするサンプルプロジェクトです。  
