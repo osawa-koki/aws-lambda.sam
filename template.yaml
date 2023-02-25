@@ -16,6 +16,8 @@ Resources:
     Properties:
       FunctionName: aws-lambda-tf
       PackageType: Image
+      ImageConfig:
+        Command: [ "app.lambdaHandler2" ]
       Architectures:
         - x86_64
       Events:

@@ -11,12 +11,30 @@
  *
  */
 
-export const lambdaHandler = async (event, context) => {
+
+
+export const lambdaHandler1 = async (event, context) => {
   try {
     return {
       'statusCode': 200,
       'body': JSON.stringify({
-        message: 'hello world',
+        message: 'hello world111',
+      })
+    }
+  } catch (err) {
+    console.log(err);
+    return err;
+  }
+
+  return response
+};
+
+export const lambdaHandler2 = async (event, context) => {
+  try {
+    return {
+      'statusCode': 200,
+      'body': JSON.stringify({
+        message: 'hello world222',
       })
     }
   } catch (err) {
