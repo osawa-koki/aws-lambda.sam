@@ -2,10 +2,10 @@ version = 0.1
 [default]
 [default.deploy]
 [default.deploy.parameters]
-stack_name = "aws-lambda-tf"
+stack_name = "sam-app"
 s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1bs1ehtme4d8m"
-s3_prefix = "aws-lambda-tf"
+s3_prefix = "sam-app"
 region = "ap-northeast-1"
 capabilities = "CAPABILITY_IAM"
 disable_rollback = true
-image_repositories = ["HelloWorldFunction=938385028059.dkr.ecr.ap-northeast-1.amazonaws.com/awslambdatf170f7743/helloworldfunction19d43fc4repo"]
+image_repositories = ["HelloGet=938385028059.dkr.ecr.ap-northeast-1.amazonaws.com/samapp7427b055/helloget8a0e7832repo", "HelloPost=938385028059.dkr.ecr.ap-northeast-1.amazonaws.com/samapp7427b055/hellopost735355ffrepo", "HelloPut=938385028059.dkr.ecr.ap-northeast-1.amazonaws.com/samapp7427b055/hellopute30a738arepo", "HelloDelete=938385028059.dkr.ecr.ap-northeast-1.amazonaws.com/samapp7427b055/hellodelete611b0cferepo"]

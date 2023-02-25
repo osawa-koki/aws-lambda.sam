@@ -11,36 +11,58 @@
  *
  */
 
-
-
-export const lambdaHandler1 = async (event, context) => {
+export const HelloGet = async (event, context) => {
   try {
     return {
       'statusCode': 200,
       'body': JSON.stringify({
-        message: 'hello world111',
+        message: 'Hello Get',
       })
     }
   } catch (err) {
     console.log(err);
     return err;
   }
-
-  return response
 };
 
-export const lambdaHandler2 = async (event, context) => {
+export const HelloPost = async (event, context) => {
   try {
     return {
       'statusCode': 200,
       'body': JSON.stringify({
-        message: 'hello world222',
+        message: 'Hello Post',
       })
     }
   } catch (err) {
     console.log(err);
     return err;
   }
-
-  return response
 };
+
+export const HelloPut = async (event, context) => {
+  try {
+    return {
+      'statusCode': 200,
+      'body': JSON.stringify({
+        message: 'Hello Put',
+      })
+    }
+  } catch (err) {
+    console.log(err);
+    return err;
+  }
+}
+
+export const HelloDelete = async (event, context) => {
+  try {
+    return {
+      'statusCode': 200,
+      'body': JSON.stringify({
+        message: 'Hello Delete',
+      })
+    }
+  } catch (err) {
+    console.log(err);
+    return err;
+  }
+}
