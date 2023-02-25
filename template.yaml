@@ -4,16 +4,17 @@ Description: >
   aws-lambda-tf
 
   Sample SAM Template for aws-lambda-tf
-  
+
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
   Function:
-    Timeout: 3
+    Timeout: 60
 
 Resources:
   HelloWorldFunction:
     Type: AWS::Serverless::Function
     Properties:
+      FunctionName: aws-lambda-tf
       PackageType: Image
       Architectures:
         - x86_64
