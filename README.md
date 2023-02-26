@@ -2,6 +2,8 @@
 
 🦃🦃🦃 Terraformで`AWS Lambda`をプロビジョニングするサンプルプロジェクトです。  
 
+![成果物](./docs/img/fruit.gif)  
+
 ## 実行方法
 
 以下のディレクトリで`AWS SAM`コマンドを実行します。  
