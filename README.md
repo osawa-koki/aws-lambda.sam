@@ -4,7 +4,7 @@
 
 ![成果物](./docs/img/fruit.gif)  
 
-## 環境準備
+## CI/CD設定
 
 以下の値をリポジトリシークレットに設定します。  
 
@@ -19,8 +19,9 @@
 
 `main`ブランチにマージすると、`AWS Lambda`のプロビジョニングが実行されます。  
 
-## 実行方法
+## ローカルからのデプロイ
 
+GitHub Actionsを用いない場合です。  
 以下のディレクトリで`AWS SAM`コマンドを実行します。  
 
 ```shell
@@ -28,7 +29,19 @@ sam build --use-container
 sam deploy --guided
 ```
 
----
+## ローカル実行
+
+開発目的でローカルで実行するには、以下のコマンドを実行します。  
+
+```shell
+sam build --use-container
+sam local start-api
+
+# リクエストの送信
+sam local invoke
+```
+
+## サンプルコード
 
 以下のパスにアクセスします。  
 
@@ -66,30 +79,6 @@ AWS SAM CLIとは、Serverless Application Model の略称でAWS Lambdaのロー
 
 前提として、`AWS CLI`がインストールされている必要があります。  
 `AWS CLI`のインストール方法は、[公式ページ](https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/install-cliv2.html)を参照してください。  
-
-### ローカルでの実行
-
-以下のコマンドで、ローカルで実行できます。  
-
-```shell
-sam build --use-container
-sam local start-api
-```
-
-リクエストの送信をコマンドで同時に行う場合は、以下のコマンドを実行します。  
-
-```shell
-sam local invoke
-```
-
-### デプロイ
-
-以下のコマンドで、デプロイできます。  
-
-```shell
-sam build --use-container
-sam deploy --guided
-```
 
 ### 削除
 
