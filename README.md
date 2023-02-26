@@ -11,6 +11,17 @@ sam build --use-container
 sam deploy --guided
 ```
 
+---
+
+以下のパスにアクセスします。  
+
+* /Prod (GET)
+* /Prod (POST)
+* /Prod (PUT)
+* /Prod (DELETE)
+
+`Hello ★メソッド名★`というレスポンスが返ってきます。  
+
 ## 環境情報
 
 | Name | Version |
