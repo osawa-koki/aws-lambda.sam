@@ -4,6 +4,21 @@
 
 ![成果物](./docs/img/fruit.gif)  
 
+## 環境準備
+
+以下の値をリポジトリシークレットに設定します。  
+
+| Name | Value |
+| --- | --- |
+| AWS_ACCESS_KEY_ID | AWSアクセスキー |
+| AWS_SECRET_ACCESS_KEY | AWSシークレットアクセスキー |
+| AWS_REGION | AWSリージョン |
+| SAMCONFIG_TOML | `samconfig.toml`の内容をBASE64でエンコードしたデータ |
+
+※`samconfig.toml`の内容をBASE64でエンコードする理由はリポジトリシークレットは原則として構造化されたデータを扱えないためです。  
+
+`main`ブランチにマージすると、`AWS Lambda`のプロビジョニングが実行されます。  
+
 ## 実行方法
 
 以下のディレクトリで`AWS SAM`コマンドを実行します。  
