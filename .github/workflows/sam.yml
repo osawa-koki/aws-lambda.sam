@@ -17,6 +17,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
-      - run: echo ${{ secrets.SAMCONFIG_TOML }} > samconfig.toml
+      - run: echo -n ${{ secrets.SAMCONFIG_TOML }} | base64 --decode > samconfig.toml
+      - run: cat samconfig.toml
       - run: sam build --use-container
       - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
