@@ -1,0 +1,89 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  aws-lambda-tf
+
+  Sample SAM Template for aws-lambda-tf
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 60
+
+Resources:
+  HelloGet:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: aws-lambda-tf-get
+      PackageType: Image
+      ImageConfig:
+        Command: [ "app.HelloGet" ]
+      Architectures:
+        - x86_64
+      Events:
+        AllApiPaths:
+          Type: Api
+          Properties:
+            Path: /
+            Method: get
+    Metadata:
+      DockerTag: nodejs18.x-v1
+      DockerContext: ./hello-world
+      Dockerfile: Dockerfile
+  HelloPost:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: aws-lambda-tf-post
+      PackageType: Image
+      ImageConfig:
+        Command: [ "app.HelloPost" ]
+      Architectures:
+        - x86_64
+      Events:
+        AllApiPaths:
+          Type: Api
+          Properties:
+            Path: /
+            Method: post
+    Metadata:
+      DockerTag: nodejs18.x-v1
+      DockerContext: ./hello-world
+      Dockerfile: Dockerfile
+  HelloPut:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: aws-lambda-tf-put
+      PackageType: Image
+      ImageConfig:
+        Command: [ "app.HelloPut" ]
+      Architectures:
+        - x86_64
+      Events:
+        AllApiPaths:
+          Type: Api
+          Properties:
+            Path: /
+            Method: put
+    Metadata:
+      DockerTag: nodejs18.x-v1
+      DockerContext: ./hello-world
+      Dockerfile: Dockerfile
+  HelloDelete:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: aws-lambda-tf-delete
+      PackageType: Image
+      ImageConfig:
+        Command: [ "app.HelloDelete" ]
+      Architectures:
+        - x86_64
+      Events:
+        AllApiPaths:
+          Type: Api
+          Properties:
+            Path: /
+            Method: delete
+    Metadata:
+      DockerTag: nodejs18.x-v1
+      DockerContext: ./hello-world
+      Dockerfile: Dockerfile
