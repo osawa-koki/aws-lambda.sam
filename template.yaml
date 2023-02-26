@@ -1,9 +1,9 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >
-  aws-lambda-tf
+  aws-lambda-sam
 
-  Sample SAM Template for aws-lambda-tf
+  Sample SAM Template for aws-lambda-sam
 
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
@@ -14,7 +14,7 @@ Resources:
   HelloGet:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: aws-lambda-tf-get
+      FunctionName: aws-lambda-sam-get
       PackageType: Image
       ImageConfig:
         Command: [ "app.HelloGet" ]
@@ -33,7 +33,7 @@ Resources:
   HelloPost:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: aws-lambda-tf-post
+      FunctionName: aws-lambda-sam-post
       PackageType: Image
       ImageConfig:
         Command: [ "app.HelloPost" ]
@@ -52,7 +52,7 @@ Resources:
   HelloPut:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: aws-lambda-tf-put
+      FunctionName: aws-lambda-sam-put
       PackageType: Image
       ImageConfig:
         Command: [ "app.HelloPut" ]
@@ -71,7 +71,7 @@ Resources:
   HelloDelete:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: aws-lambda-tf-delete
+      FunctionName: aws-lambda-sam-delete
       PackageType: Image
       ImageConfig:
         Command: [ "app.HelloDelete" ]

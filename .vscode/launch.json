@@ -3,7 +3,7 @@
     {
       "type": "aws-sam",
       "request": "direct-invoke",
-      "name": "aws-lambda.tf:HelloWorldFunction",
+      "name": "aws-lambda.sam:HelloWorldFunction",
       "invokeTarget": {
         "target": "template",
         "templatePath": "${workspaceFolder}/template.yaml",
@@ -17,10 +17,10 @@
     {
       "type": "aws-sam",
       "request": "direct-invoke",
-      "name": "aws-lambda-tf:HelloWorldFunction",
+      "name": "aws-lambda-sam:HelloWorldFunction",
       "invokeTarget": {
         "target": "template",
-        "templatePath": "${workspaceFolder}/aws-lambda-tf/template.yaml",
+        "templatePath": "${workspaceFolder}/aws-lambda-sam/template.yaml",
         "logicalId": "HelloWorldFunction"
       },
       "lambda": {
@@ -32,10 +32,10 @@
     {
       "type": "aws-sam",
       "request": "direct-invoke",
-      "name": "API aws-lambda-tf:HelloWorldFunction",
+      "name": "API aws-lambda-sam:HelloWorldFunction",
       "invokeTarget": {
         "target": "api",
-        "templatePath": "${workspaceFolder}/aws-lambda-tf/template.yaml",
+        "templatePath": "${workspaceFolder}/aws-lambda-sam/template.yaml",
         "logicalId": "HelloWorldFunction"
       },
       "api": {

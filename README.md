@@ -1,4 +1,4 @@
-# aws-lambda.tf
+# aws-lambda.sam
 
 🦃🦃🦃 Terraformで`AWS Lambda`をプロビジョニングするサンプルプロジェクトです。  
 
